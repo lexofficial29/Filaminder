@@ -1,9 +1,13 @@
-import "./index.css";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { App } from "./components/Component";
+import { Spool } from './types';
 
-export function App() {
-  return (
-    <h1>Hello world!</h1>
-  );
-}
+const elem = document.getElementById("root")!;
+const app = (
+  <StrictMode>
+    <App />
+  </StrictMode>
+);
 
-export default App;
+(import.meta.hot.data.root ??= createRoot(elem)).render(app);

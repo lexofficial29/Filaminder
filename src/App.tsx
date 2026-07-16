@@ -1,13 +1,12 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import { App } from "./components/Component";
-import { Spool } from './types';
+import "./css/index.css";
+import { useState } from "react";
+import FilamentForm from "./components/FilamentForm";
+import SpoolCard from "./components/SpoolCard";
 
-const elem = document.getElementById("root")!;
-const app = (
-  <StrictMode>
-    <App />
-  </StrictMode>
-);
+export function App() {
+  return (
+    <FilamentForm />
+  );
+}
 
-(import.meta.hot.data.root ??= createRoot(elem)).render(app);
+export default App;
